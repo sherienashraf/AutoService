@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+{% block title %} Login {% endblock %}
+{% load static %}
+{% block content %}
+
+<style>
+   *{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+        body{
+
+         background: url("{% static 'img/w.jpg'%}") no-repeat ;
+         background-size: cover;
+         background-attachment: fixed;
+                  padding: 0px 110px
+        }
+
+        label {
+    display: inline-block;
+    margin-top: 20px;
+        }
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 10px;
+    margin: 13px 0px;
+    display: inline-block;
+    border: 1px solid blue;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 10px;
+    margin: 3.3px 0px;
+    display: inline-block;
+    border: 1px solid blue;
+    border-radius: 14px;
+    box-sizing: border-box;
+
+}
+.submit {
+  width: 40%;
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 145px;
+  border-radius: 4px;
+  transition: 0.8s ease;
+    border: 0ch;
+    text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 130px;
+
+}
+
+.submit:hover {
+    transform: scale(1.1);
+    color:  blue;
+    background-color: #191A19;
+}
+
+input#fname {
+    background-color: white;
+    color: black;
+}
+
+input#fname {
+    background-color: white;
+    color: black;
+}
+
+div {
+    color: white;
+  background:fixed;
+border-radius: 18px;
+padding: 10px 50px;
+margin-top: 140px;
+
+}
+
+.a1{
+    width: 100px;
+            height:50px;
+            margin: 13px -32px;
+}
+
+h3{
+  padding-top: 10px;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 1px 2px 1px rgb(0, 0, 0),
+    1px 3px 1px rgb(0, 0, 0),
+    1px 4px 1px rgb(0, 0, 0),
+    1px 5px 1px rgb(0, 0, 0),
+    1px 6px 1px rgb(0, 0, 0),
+    1px 7px 1px rgb(0, 0, 0),
+    1px 8px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0);
+
+
+
+}
+
+p{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+a span {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    transition: 1s ease;
+    border: 0ch;
+font-size: 12px;
+display: inline-block;
+    padding-left: 7px;
+}
+a span:hover{
+    transform: scale(1.1);
+    color:  blue;
+}
+
+h6{
+color: #dee1dd;
+font-size: 12px;
+transition: 1s ease;
+    border: 0ch;
+}
+
+h6:hover{
+    transform: scale(1.1);
+    color:  blue;
+}
+
+h2{
+    position: absolute;
+    left: 48%;
+    top: 43%;
+    font-size: 90px;
+    font-weight: 700;
+    color: blue;
+    text-shadow: 1px 2px 1px rgb(0, 0, 0),
+    1px 3px 1px rgb(0, 0, 0),
+    1px 4px 1px rgb(0, 0, 0),
+    1px 5px 1px rgb(0, 0, 0),
+    1px 6px 1px rgb(0, 0, 0),
+    1px 7px 1px rgb(0, 0, 0),
+    1px 8px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0);
+
+
+}
+
+</style>
+<div class="col-5">
+    
+    <h3>LOG IN</h3>
+    <form method="post">
+        {% csrf_token %}
+        <h4 style="color:red">{{ error }}</h4>
+        <label for="username">username</label>
+        <input type="text" id="username" name="username" placeholder="username"><br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password"><br>
+        <a href="#" style="color: #FFFFFF;"><span>
+                
+            </span>
+        </a>
+
+
+        <button class="submit">LOG IN </button>
+        <p>or sign in with other accounts?<a style="color: #FFFFFF;" href="{% url 'signup' %}"><span>
+                    Don’t have an account? </span>
+                </a>
+        </p>
+    </form>
+    
+</div>
+<h2>AUTO SERVICE</h2>
+
+<!--
+
+    <div>
+        <a href="{% url 'home' %}"><img class="a1" src="{% static 'img/logo2.png' %}" alt="logo" width="50px" height="50px"></a><br>
+        <h3>LOG IN</h3>
+        
+-->
+
+{% endblock %}

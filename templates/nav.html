@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+@media screen and (max-width:600px){
+    header{
+        display: block;
+    }
+    
+}
+
+        *{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+    flex-wrap: wrap;
+}
+
+header {
+    background-color: #000000;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    flex-direction: row;
+}
+
+
+
+.navigation a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 750;
+    padding-right: 130px;
+    transition: 8s ease;
+    border: 0ch;
+
+}
+
+
+.navigation a:hover{
+    transform: scale(1.1);
+    color:  blue;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+       <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#aboutus">About Us</a>
+            <a href="#features">Features</a>
+            <a href="#services">Services</a>
+        </nav>
+        <DIV class="login">
+            {% if not request.user.is_authenticated %}
+            <a href="{% url 'signup' %}"> <input class="a2" type="submit" value="Sing Up"></a>
+            <a href="{% url 'login' %}"> <input class="a2" type="submit" value="Login"></a>
+            {% else %}
+            <a style="color:whitesmoke">Welcome {{ request.user }}</a>
+            <a href="{% url 'logout' %}"> <input class="a2" type="submit" value="Logout"></a>
+            
+            {% endif %}
+        </DIV>
+    </header>
+
+</body>
+</html>

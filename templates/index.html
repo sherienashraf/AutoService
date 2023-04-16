@@ -1,0 +1,371 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<style>
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+    flex-wrap: wrap;
+}
+
+
+
+/*//////////////////////////////////////    MAIN     ////////////////////////////////////////////////////////// */
+
+
+section {
+    padding: 5px 200px;
+    padding-bottom: 50px;
+    background-color: #000000;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    align-items:center;
+    background: url("{% static 'img/w.jpg'%}") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main h2 {
+    color: #fff;
+    font-size: 3.6em;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 1px 2px 1px rgb(0, 0, 0),
+    1px 3px 1px rgb(0, 0, 0),
+    1px 4px 1px rgb(0, 0, 0),
+    1px 5px 1px rgb(0, 0, 0),
+    1px 6px 1px rgb(0, 0, 0),
+    1px 7px 1px rgb(0, 0, 0),
+    1px 8px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0);
+
+    
+}
+
+.main h2 span {
+    display: inline-block;
+    margin-top: 5px;
+    color: blue;
+    font-size: 2.2em;
+    font-weight: 900;
+    text-shadow: 1px 2px 1px rgb(0, 0, 0),
+    1px 3px 1px rgb(0, 0, 0),
+    1px 4px 1px rgb(0, 0, 0),
+    1px 5px 1px rgb(0, 0, 0),
+    1px 6px 1px rgb(0, 0, 0),
+    1px 7px 1px rgb(0, 0, 0),
+    1px 8px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0);
+
+}
+
+.main-btn {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 900;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+}
+
+.main-btn:hover {
+    background-color: blue;
+    transform: scale(1.1);
+    color: #ffffff;
+}
+
+
+.title {
+    display:flex;
+    justify-content:center;
+    color: blue;
+    font-size: 2.9em;
+    font-weight: 900;
+    margin: 50px;
+    margin-bottom: 15px;
+    font-weight: 900;
+    text-shadow: 1px 2px 1px rgb(0, 0, 0),
+    1px 3px 1px rgb(0, 0, 0),
+    1px 4px 1px rgb(0, 0, 0),
+    1px 5px 1px rgb(0, 0, 0),
+    1px 6px 1px rgb(0, 0, 0),
+    1px 7px 1px rgb(0, 0, 0),
+    1px 8px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0);
+
+}
+
+
+/*///////////////////////////////////////    ABOUT US     //////////////////////////////////////////////// */
+
+.aboutus {
+    background-color: #000000;
+  
+}
+
+.cat .aboutus-category{
+    font-size: 30px;
+    color: white;
+    margin-top: 80px;
+}
+
+/*///////////////////////////////////////////////////    FEATURES      //////////////////////////////////////////////////////////////*/
+
+
+.features{
+    background-color: #000000;
+    background: url("{% static 'img/wallpaperflare.com_wallpaper33.jpg'%}") no-repeat;
+    background-size: cover;
+}
+.fae .p {
+    font-size: 24px;
+    overflow: hidden;
+    color: #fff;
+    text-align: left;
+    text-shadow: 1px 2px 1px rgb(0, 0, 0),
+    1px 3px 1px rgb(0, 0, 0),
+    1px 4px 1px rgb(0, 0, 0),
+    1px 5px 1px rgb(0, 0, 0),
+    1px 6px 1px rgb(0, 0, 0),
+    1px 7px 1px rgb(0, 0, 0),
+    1px 8px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0),
+    1px 9px 1px rgb(0, 0, 0);
+    
+}
+
+
+
+
+/*//////////////////////////////////////////    SERVICE      //////////////////////////////////////*/
+
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: -30px;
+}
+
+.card {
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.8s ease;
+    margin-top: 40px;
+}
+ 
+.cards {
+    background-color: #000000;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    color: blue;
+    background-color: #000000;
+}
+
+.card .icon {
+    color: blue;
+    font-size: 8em;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+    font-size: 1.1em;
+
+}
+
+.info h3{
+    color:blue;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-right: 70px;
+}
+.login a {
+    padding-left: 15px;
+    color: #ffffff;
+}
+.a2{
+    color: white;
+    width: 96px;
+    height: 35px;
+    background-color: blue;
+    font-size: 14px;
+    transition: 0.7s ease;
+    border: 0ch;
+        }
+    
+
+        .a2:hover {
+    background-color: black;
+    transform: scale(1.1);
+    color:  blue;
+}
+.col-md-12 {
+    flex: 0 0 auto;
+    width: 100%;
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 110px;
+}
+p {
+    margin-bottom: 3rem;
+}
+section .download {
+    background-color: #000000;
+    margin-left: 110px;
+    margin-top: 20px;
+}
+</style>
+
+{% include 'nav.html' %}
+
+
+<section class="main">
+    <div>
+        <h2>Support On The Road With<br><span>AUTO SERVICE</span></h2>
+        
+</section>
+
+
+<section class="aboutus" id="aboutus">
+    <h2 class="title">About Us</h2>
+        <div class="row">
+                            <div class="col-12">
+                        
+                                    <div class="cat">
+                                    <p class="aboutus-category"> It specializes in providing roadside assistance services through an electronic application, in order to meet the increasing demand by individuals who own vehicles.
+                                        The application supports communication between the customer and the service provider for the purpose of providing everything that a user needs from his basic uses about saving and maintaining his car , and provide the service request that the other party needs to earn money.<br>
+                                        The application makes it easier to search for means of support by providing its services by providing them to customers to appear more transparent and effective.
+                                        </p>
+                                </div>
+                           
+                            </div>
+        </div>   
+</section>
+<div style="clear:both;"></div>
+<section id="features" class="features">
+    <div class="row">
+        <div class="call-12"><h2 class="title">Features</h2></div>
+    <div class="col-md-6" >
+        
+                    <div class="fae">
+                    <div class="p">
+                        <p>The application has several advantages, including the feature of promotional advertisements so that the service provider can make a promotional advertisement to automatically show its services to the customer and the customer can request the service through this advertisement. 
+                            Easy to use and get the required service quickly and effectively.<br>
+                            Financial transactions are carried out directly through the service provider and the customer so that payment for the service.<br>
+                            Providing the appropriate service by facilitating and multiplying means of communication between the customer and the service provider.
+                            </p>
+
+                </div>
+                </div>
+    </div>
+
+
+
+    
+</div>
+  </section>
+
+<section class="cards" id="services">
+    <h2 class="title">Services</h2>
+    <div class="content">
+        <div class="card">
+            <div class="icon">
+                <img src="{%static 'img/WhatsApp_Image_2023-03-09_at_12.05.42__1_-removebg-preview.png'%}" width="150px" height="150px">
+            </div>
+            <div class="info">
+                <h3>Winch Rescue</h3>
+                <p>The service provider provides a rescue crane service. Where the customer can request this service through the map and determine the nearest winch to him or by searching by entering the governorate and the region and determining the service provider serving in this area, the goal of that request and rapid response by the service provider.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">
+                <img src="{%static 'img/WhatsApp_Image_2023-03-09_at_12.05.42__2_-removebg-preview.png'%}" width="150px" height="150px">
+            </div>
+            <div class="info">
+                <h3>On-road maintenance</h3>
+                <p>The customer can request this service when his car needs quick maintenance on the road, so this service is done through the hotline by communicating by phone with the service provider specialized in maintenance to identify the problem and go to the customer with the necessary equipment.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">
+                <img src="{%static 'img/WhatsApp_Image_2023-03-09_at_12.05.42-removebg-preview.png'%}" width="120px" height="150px">
+            </div>
+            <div class="info">
+                <h3>Maintenance Workshops</h3>
+                <p>This service can be requested by the customer to follow up the periodic maintenance of his car, so it is done through the map to choose the nearest workshop to him or by searching by entering the governorate and the region and then going to this workshop.</p>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<section>
+<div class="download">
+<a href="#"> <img src="{%static 'img/58660-app-google-play-store-apple-free-transparent-image-hd.png'%}"  width="400px" height="110px"></a>
+<a href="#"> <img src="{%static 'img/67033-play-google-mobile-app-logo-store.png'%}" width="400px" height="110px"></a>
+
+</div>
+</section>
+
+
+{% endblock %}
